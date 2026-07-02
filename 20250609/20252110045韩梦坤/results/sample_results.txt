@@ -1,0 +1,25 @@
+2-4 作业等价算法预验证结果（Python/SciPy，仅用于核对数值；MATLAB时间以实际运行结果为准）
+环境: Python 3.13.5, NumPy 2.3.5, Linux-4.4.0-x86_64-with-glibc2.41
+
+算例0A 一维杆:
+d=[0.0, 0.09999999999999998, 0.14999999999999997]
+reaction=[-9.999999999999998, -4.440892098500626e-16, -3.552713678800501e-15]
+element axial forces=[10, 10]
+
+算例0B 二维桁架:
+u3=38.284271247, v3=-10.000000000
+stress=[np.float64(-10.0), np.float64(14.142135623730953)]
+
+病态矩阵:
+cond2=4.00020001e+04
+double=[1. 1.], relerr=2.220e-12
+perturbed=[0.99 1.01], relerr=1.000e-02
+
+三对角矩阵（参考计时）:
+n=10, denseLDLT=0.000778s, sparse=0.000513s, dense_err=1.404e-16, sparse_err=8.600e-17
+n=100, denseLDLT=0.013209s, sparse=0.000180s, dense_err=8.017e-15, sparse_err=7.525e-15
+n=500, denseLDLT=0.819533s, sparse=0.000635s, dense_err=6.445e-14, sparse_err=4.753e-14
+n=1000, denseLDLT=7.108261s, sparse=0.000905s, dense_err=1.347e-13, sparse_err=1.330e-13
+Poisson nx=50: nodes=2601, elems=5000, unknowns=2401, nnz=16417, assembly=0.3871s, solve=0.0121s, residual=7.784e-14, maxerr=3.289e-04, L2rel=3.345e-04
+Poisson nx=100: nodes=10201, elems=20000, unknowns=9801, nnz=67817, assembly=1.5590s, solve=0.0892s, residual=3.298e-13, maxerr=8.224e-05, L2rel=8.364e-05
+Poisson nx=200: nodes=40401, elems=80000, unknowns=39601, nnz=275617, assembly=6.5032s, solve=0.6585s, residual=1.347e-12, maxerr=2.056e-05, L2rel=2.091e-05

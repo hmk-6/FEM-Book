@@ -1,0 +1,5 @@
+Method,Success,RelativeResidual,RelativeError
+double,1,0,2.22044604925031e-12
+round4,0,NaN,NaN
+single,1,6.66323552433262e-08,0.00119188427962369
+rhs_perturbed,1,0,0.00999999999917844

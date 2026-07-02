@@ -1,0 +1,11 @@
+{
+  "Title": "2.3 one-dimensional two-element bar reduced equation",
+  "source_homework": "2-3 Global Stiffness Equations",
+  "K_FF": [[300, -200], [-200, 200]],
+  "rhs": [0, 10],
+  "known_dof": [1],
+  "free_dof": [2, 3],
+  "full_K": [[100, -100, 0], [-100, 300, -200], [0, -200, 200]],
+  "full_force": [0, 0, 10],
+  "known_displacement": [0]
+}
